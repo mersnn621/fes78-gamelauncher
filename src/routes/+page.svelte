@@ -26,7 +26,7 @@
         <button class={`px-5 py-3 border-2 rounded-md hover:scale-110 transition  bg-blue-200/20 ${folder=="" ? "border-red-400" :"border-blue-400"}`} onclick={launch}>{folder=="" ? "フォルダーを選択してください" : "ランチャーを起動"}</button>
     <div class="flex justify-center items-center gap-3 h-6">
         <p>{folder}</p>
-        <button class="px-3 py-1 border-red-400 border-2 text-sm rounded-sm" onclick={
+        <button class="px-3 py-1 border-red-400 border-2 text-sm rounded-sm transition hover:bg-red-400/20" onclick={
 () => {folder = ""}
         }>解除</button>
     </div>
