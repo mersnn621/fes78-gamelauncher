@@ -1,0 +1,92 @@
+<script lang="ts">
+  import { openPath,openUrl } from '@tauri-apps/plugin-opener';
+  import { onMount } from 'svelte';
+
+  let command:string = $state('');
+  let response = $state('');
+  let isLoading = $state(false);
+
+  async function runCommand() {
+    await openUrl(command);
+  }
+
+
+
+  function echo() {
+    response = command;
+  }
+</script>
+
+<main class="container">
+  <input type="text" id="greet-input" placeholder="Command" bind:value={command} />
+  <button onclick={runCommand}>Run Command</button>
+  <p>{response}</p>
+</main>
+
+<style>
+
+
+
+.container {
+  margin: 0;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+
+input,
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #0f0f0f;
+  background-color: #ffffff;
+  transition: border-color 0.25s;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: #396cd8;
+}
+button:active {
+  border-color: #396cd8;
+  background-color: #e8e8e8;
+}
+
+input,
+button {
+  outline: none;
+}
+
+#greet-input {
+  margin-right: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #f6f6f6;
+    background-color: #2f2f2f;
+  }
+
+
+  input,
+  button {
+    color: #ffffff;
+    background-color: #0f0f0f98;
+  }
+  button:active {
+    background-color: #0f0f0f69;
+  }
+}
+
+</style>
