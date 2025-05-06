@@ -1,8 +1,8 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "game-launcher",
-  "version": "0.1.0",
-  "identifier": "com.epc.game-launcher78",
+  "productName": "EPC Game Launcher 2025",
+  "version": "0.1.1",
+  "identifier": "com.mersnn621.game-launcher78",
   "build": {
     "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:1420",
@@ -12,9 +12,10 @@
   "app": {
     "windows": [
       {
-        "title": "game-launcher",
+        "title": "EPC Game Launcher 2025",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "fullscreen": true
       }
     ],
     "security": {
