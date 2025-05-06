@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "name": "Game 1",
+        "gamefile": "sample.app",
+        "caution": true
+    },
+    {
+        "id": 2,
+        "name": "Game 2",
+        "gamefile": "another_game.app",
+        "caution": true
+    },
+    {
+        "id": 3,
+        "name": "Game 3",
+        "gamefile": "third_game.app"
+    },
+    {
+        "id": 4,
+        "name": "Game 4",
+        "gamefile": "fourth_game.app"
+    },
+    {
+        "id": 5,
+        "name": "Game 5",
+        "gamefile": "fifth_game.app"
+    }
+]
