@@ -2,12 +2,14 @@
     import logo from "../lib/assets/general.svg";
     import { open } from '@tauri-apps/plugin-dialog';
     let folder = $state('');
+    folder = sessionStorage.getItem("folder") ?? "";
     const openmes = async () => {
         folder = await open({
             directory: true,
             multiple: false,
             title: "フォルダを選択",
         }) ?? "";
+        sessionStorage.setItem("folder", folder);
     }
     const launch = () => {
         if (folder == "") {
