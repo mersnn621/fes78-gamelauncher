@@ -127,7 +127,7 @@
         <!-- svelte-ignore a11y_no_static_element_interactions -->
         <div class={`border-2 w-full text-left p-4 m-2 rounded-l-3xl flex flex-col transition-all duration-200  cursor-pointer ${selecting == game.id ? "translate-x-12 scale-110" : "hover:translate-x-4 hover:scale-105"}`} onclick={() => {
           selecting = game.id;}}>
-          <p class="text-3xl mb-2">{game.name}</p>
+          <p class="text-2xl mb-2">{game.name}</p>
           <p class="text-base overflow-hidden text-ellipsis whitespace-nowrap">
             {#await getDescription(game)}
               読み込み中...
@@ -148,19 +148,19 @@
           </div>
         {:then thumbnail}
           {#if thumbnail != ""}
-            <img src={thumbnail} alt="" class="h-64 mx-auto rounded-xl object-cover" />
+            <img src={thumbnail} alt="" class="h-48 mx-auto rounded-xl object-cover" />
           {:else}
-          <div class="h-64 bg-blue-700 w-128 mx-auto flex text-center">
+          <div class="h-48 bg-blue-700 w-96 mx-auto flex text-center">
             <p class="text-3xl">サムネイルが存在しません</p>
           </div>
           {/if}
         {:catch error}
-        <div class="h-64 bg-blue-700 w-128 mx-auto flex text-center">
+        <div class="h-48 bg-blue-700 w-96 mx-auto flex text-center">
           <p class="text-3xl">サムネイルを取得できませんでした</p>
         </div>
         {/await}
-        <p class="text-left text-6xl">{selectinggame().name}</p>
-        <p class="text-left text-3xl h-68 overflow-x-scroll whitespace-pre-line hidden-scrollbar">
+        <p class="text-left text-4xl">{selectinggame().name}</p>
+        <p class="text-left text-2xl h-68 overflow-x-scroll whitespace-pre-line hidden-scrollbar">
           {#await getDescription(selectinggame())}
             読み込み中...
           {:then description}
