@@ -3,6 +3,7 @@
   import { readTextFile,exists,BaseDirectory,readFile} from '@tauri-apps/plugin-fs';
   import * as path from '@tauri-apps/api/path';
   import { message } from '@tauri-apps/plugin-dialog';
+  import { fetch } from '@tauri-apps/plugin-http';
 
   import { onMount } from 'svelte';
   import { get } from 'svelte/store';
@@ -94,7 +95,10 @@
 
   async function openGame(game: Game) {
     const gamefile = await path.join(folder, game.name, "game", game.gamefile);
-    const fileexists = await exists(gamefile);
+    const response = await fetch(`http://gamecount.mersnn621.com/track?game=${game.id}`, {
+  method: 'GET',
+});
+    const fileexists = await exists(gamefile);  
     if (fileexists) {
       await openPath(gamefile);
     } else {

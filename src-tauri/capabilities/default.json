@@ -70,6 +70,10 @@
           "path": "**"
         }
       ]
+    },
+    {
+      "identifier": "http:default",
+      "allow": [{ "url": "http://gamecount.mersnn621.com"},{ "url": "https://gamecount.mersnn621.com"}]
     }
   ]
 }
