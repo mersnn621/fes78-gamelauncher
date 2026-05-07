@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
-    "@tauri-apps/api": "^2",
+    "@tauri-apps/api": "^2.11.0",
     "@tauri-apps/plugin-dialog": "^2.2.1",
     "@tauri-apps/plugin-fs": "^2.2.1",
     "@tauri-apps/plugin-http": "^2.4.3",
@@ -30,6 +30,6 @@
     "svelte-check": "^4.0.0",
     "typescript": "~5.6.2",
     "vite": "^6.0.3",
-    "@tauri-apps/cli": "^2"
+    "@tauri-apps/cli": "^2.11.1"
   }
 }
